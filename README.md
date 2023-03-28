@@ -4,7 +4,7 @@ I'm Viet, but you can call me Ramen if you want to.
 
 I'm a self-taught dev from Vietnam 🇻🇳, and I love food, coding, and unrealistic expectations that I unapologetically set for myself and other people.
 
-## And now for a random programming joke that may or may not have been posted to r/programminghumor:
+### And now for a random programming joke that may or may not have been posted to r/ProgrammerHumor:
 ```rust
 use life::Human;
 use rand::Rng;
