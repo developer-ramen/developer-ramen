@@ -1,53 +1,45 @@
 # Hi there! 👋
 
-I'm Viet, but you can call me Ramen just because I said so.
+I'm Viet, but you can call me Ramen if you want to.
 
-I'm from Vietnam 🇻🇳 *(oh hey my name's in there!)*, and I **love** coding and cracking problems in TypeScript and Rust (yes I am one of those hippie devs that jump on every new thing). My pronouns are he/him or they/them.
+I'm a self-taught dev from Vietnam 🇻🇳, and I love food, coding, and unrealistic expectations that I unapologetically set for myself and other people.
 
-## What am I working on? 🏃
+## And now for a random programming joke that may or may not have been posted to r/programminghumor:
+```rust
+use life::Human;
+use rand::Rng;
+use std::time::Duration;
 
-Well, *things.*
+pub fn adhd_mechanism(&mut human: Human) {
+    thread::spawn(|| {
+        let mut rng = rand::thread_rng();
+        if rng.gen::<u8>() % 2 == 0 {
+            human.focused = false;
+            human.have_midlife_existential_crisis();
+            human.stomach.gargle();
+            human.google_search("webmd gargling stomach");
+            // Note that since this is a separate thread, it will not panic!() the whole program.
+            panic!("Human might have a burst appendix or have cancer that starts in the abdomen");
+        }
+    }).join().expect("The human probably did have an appendix burst");
+}
 
-See, I'm very forgetful - you may have to remind me to update this every once in a while. Hey, that should be a GitHub feature!
+pub fn procrastinate(&mut human: Human) {
+    thread::sleep(Duration::from_secs(rand::thread_rng().gen::<u64>()));
+}
 
-### [Sentinel](https://github.com/out-post/sentinel)
-
-It's a bot that I'm spending precious time trying to painstakingly migrate from TypeScript to Rust! Damn you, new language hype!
-
-Check the bot out sometime! I have lots of features planned for it.
-
-### [developer-ramen.github.io](developer-ramen.github.io)
-
-What the - a personal blog? How unpredictable!
-
-## Q&A
-
-### Do I ~~sound this patronising and put on a friendly facade~~ speak like this in real life?
-
-No of course not.
-
-### *Fudge*, marry, kill: Language A, language B, language C.
-
-Is Rust one of the options?
-
-### What else do I like, other than obviously coding?
-
-Pokémon, food, music, memes, fanfiction, and starting things that sounded really good in my head but then turned out to be more work than I am willing to put in!
-
-### Can I please have your credit card details?
-
-I don't think I even have one.
-
-### Do I advocate for open source?
-
-When you go through my computer and, heaven forbid, you find me using WebStorm or CLion, believe me when I say I got an educational license for that.
-
-### Have I overshared and should I stop this section right here?
-
-Probably.
-
-## Reach out!
-
-Take a look in my profile (which you probably are looking at right now, but whatever)!
-
-Usually for these sections I would suggest you `Buy me a coffee!`, but I have bad experiences with caffeine... so `Buy me a pizza!` instead?
+pub fn main() {
+    let mut me: Human = Human::new(); // My future children, this is how all humans are made.
+    
+    while me.focused {
+        adhd_mechanism(&mut me);
+        
+        me.eat();
+        me.check_for_doppelgangers();
+        me.sleep(Duration::from_secs(2 * 60 * 60)); // I sleep for 2 hours and I barely function during the day, so why sleep more?
+        
+        procrastinate(&mut me);
+        me.code();
+    }
+}
+```
