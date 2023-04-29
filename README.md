@@ -10,7 +10,7 @@ use life::Human;
 use rand::Rng;
 use std::time::Duration;
 
-pub fn adhd_mechanism(&mut human: Human) {
+pub fn adhd_mechanism(human: &mut Human) {
     thread::spawn(|| {
         let mut rng = rand::thread_rng();
         if rng.gen::<u8>() % 2 == 0 {
@@ -24,7 +24,7 @@ pub fn adhd_mechanism(&mut human: Human) {
     }).join().expect("The human probably did have an appendix burst");
 }
 
-pub fn procrastinate(&mut human: Human) {
+pub fn procrastinate(human: &mut Human) {
     thread::sleep(Duration::from_secs(rand::thread_rng().gen::<u64>()));
 }
 
